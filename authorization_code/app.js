@@ -140,5 +140,8 @@ app.get('/refresh_token', function (req, res) {
   })
 })
 
-console.log('Listening on 8888')
-app.listen(8888)
+const port = process.env.PORT || 3000
+app.listen(port, function () {
+  // eslint-disable-next-line no-console
+  console.log('Listening on port', port)
+})
